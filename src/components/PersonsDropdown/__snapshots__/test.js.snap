@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PersonsDropdown it matches the snapshot 1`] = `
+<div>
+  <select
+    name="person"
+  >
+    <option
+      value="Luke Skywalker"
+    >
+      Luke Skywalker
+    </option>
+    <option
+      value="R2D2"
+    >
+      R2D2
+    </option>
+    <option
+      value="C-3PO"
+    >
+      C-3PO
+    </option>
+    <option
+      value="Darth Vader"
+    >
+      Darth Vader
+    </option>
+    <option
+      value="Yoda"
+    >
+      Yoda
+    </option>
+  </select>
+</div>
+`;

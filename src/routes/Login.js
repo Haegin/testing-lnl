@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { withStateHandlers, compose } from 'recompose'
 
 import Page from '../components/Page'
-import PersonDropdown from '../components/PersonDropdown'
+import PersonsDropdown from '../components/PersonsDropdown'
 
 const Form = styled.div`
   margin-top: 3rem;
@@ -66,7 +66,7 @@ const Login = ({ handleSubmit, changeName, changePerson, name, person }) => (
       </Row>
       <Row>
         <Label htmlFor="person">Favourite Person</Label>
-        <PersonDropdown value={person} onChange={changePerson} />
+        <PersonsDropdown value={person} onChange={changePerson} />
       </Row>
       <Row>
         <Button onClick={handleSubmit}>Login</Button>

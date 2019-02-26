@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { withStateHandlers, compose } from 'recompose'
 
 import Page from '../components/Page'
+import PersonDropdown from '../components/PersonDropdown'
 
 const Form = styled.div`
   margin-top: 3rem;
@@ -48,7 +49,7 @@ const Button = styled.button`
   }
 `
 
-const Login = ({ handleSubmit, changeName, changeFilm, name, film }) => (
+const Login = ({ handleSubmit, changeName, changePerson, name, person }) => (
   <Page>
     <h1>Login</h1>
     <Link to="/">Home</Link>
@@ -64,6 +65,10 @@ const Login = ({ handleSubmit, changeName, changeFilm, name, film }) => (
         />
       </Row>
       <Row>
+        <Label htmlFor="person">Favourite Person</Label>
+        <PersonDropdown value={person} onChange={changePerson} />
+      </Row>
+      <Row>
         <Button onClick={handleSubmit}>Login</Button>
       </Row>
     </Form>
@@ -74,13 +79,13 @@ export default compose(
   withStateHandlers(
     {
       name: '',
-      film: undefined,
+      person: undefined,
     },
     {
       changeName: () => evt => ({ name: evt.target.value }),
-      changeFilm: () => film => ({ film }),
-      handleSubmit: ({ name, film }, { onSubmit }) => () =>
-        onSubmit({ name, film }),
+      changePerson: () => evt => ({ person: evt.target.value }),
+      handleSubmit: ({ name, person }, { onSubmit }) => () =>
+        onSubmit({ name, person }),
     }
   )
 )(Login)

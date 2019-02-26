@@ -4,8 +4,10 @@ const Card = styled.div`
   flex-direction: column;
   padding: 1rem;
   margin: 1rem;
-  background-color: 'light-grey';
+  background-color: powderblue;
   border: 1px dashed black;
+  width: 512px;
+  color: midnightblue;
 `
 
 export default Card

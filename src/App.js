@@ -7,8 +7,8 @@ import Login from './routes/Login'
 const App = () => (
   <BrowserRouter>
     <>
-      <Route path="/login" component={Login} />
-      <Route path="/" component={Home} />
+      <Route path="/login" render={() => <Login onSubmit={console.log} />} />
+      <Route path="/" exact component={Home} />
     </>
   </BrowserRouter>
 )

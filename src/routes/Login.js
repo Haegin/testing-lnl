@@ -66,7 +66,7 @@ const Login = ({ handleSubmit, changeName, changePerson, name, person }) => (
       </Row>
       <Row>
         <Label htmlFor="person">Favourite Person</Label>
-        <PersonsDropdown value={person} onChange={changePerson} />
+        <PersonsDropdown id="person" value={person} onChange={changePerson} />
       </Row>
       <Row>
         <Button onClick={handleSubmit}>Login</Button>

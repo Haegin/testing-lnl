@@ -1,7 +1,7 @@
 import React from 'react'
 
-const PersonsDropdown = ({ persons, value, onChange }) => (
-  <select name="person" value={value} onChange={onChange}>
+const PersonsDropdown = ({ persons, ...rest }) => (
+  <select name="person" {...rest}>
     {persons.map(person => (
       <option value={person.name} key={person.name}>
         {person.name}

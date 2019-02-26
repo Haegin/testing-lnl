@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
 import { compose, branch, renderComponent, mapProps } from 'recompose'
 import { graphql } from 'react-apollo'
 
